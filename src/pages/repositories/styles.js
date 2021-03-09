@@ -54,8 +54,8 @@ export const ItemIcon = styled(Icon).attrs({
     margin-right: 15px;
 `
 
-export const InfosView = styled.View`
-`
+export const InfosView = styled.View``
+
 export const RepoName = styled.Text`
     color: #040404;
     font-size: 16px;

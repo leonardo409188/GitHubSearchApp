@@ -22,7 +22,7 @@ export const getData = async (key) => {
 export const handleStorage = async (user, picture, type) => {
 	const users = await getData('favorites');
 
-	if (!type) {  // type === false, ou seja...vai setar o usuário no storage
+	if (!type) {  
 		const newUser = mountUser(user, picture);
 
 		if (users) {
@@ -35,19 +35,11 @@ export const handleStorage = async (user, picture, type) => {
 		}
 
 		return true;
-	} else {   // type === true, ou seja, vai retirar o usuário do storage
+	} else { 
 		const removedUser = users.filter(el => el.login !== user);
 		await storeData('favorites', JSON.stringify(removedUser));
 
 		return false;
-	}
-}
-
-export const removeData = async (key) => {
-	try {
-		await AsyncStorage.removeItem('favorites');
-	} catch (e) {
-		console.log(e);
 	}
 }
 

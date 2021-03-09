@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components/native";
-import HeaderIcon from 'react-native-vector-icons/FontAwesome';
+import styled from "styled-components/native";
 import { Dimensions } from 'react-native';
+import HeaderIcon from 'react-native-vector-icons/FontAwesome';
+
 const height = Dimensions.get('window').height;
 
 export const HeaderContainer = styled.View`

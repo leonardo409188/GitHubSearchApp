@@ -5,5 +5,4 @@ export const Title = styled.Text`
     margin-bottom: 15px;
     font-size: 18px;
 `
-export const UsersList = styled.FlatList`
-`
+export const UsersList = styled.FlatList``

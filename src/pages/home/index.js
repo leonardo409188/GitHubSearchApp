@@ -62,20 +62,20 @@ const Home = ({ navigation }) => {
 					<SearchButton
 						onPress={() => user()}
 						disabled={disabled}>
-						{loading ? <ActivityIndicator /> : <IconButton />}
+						{ loading ? <ActivityIndicator /> : <IconButton /> }
 					</SearchButton>
 				</FormView>
 
 				{users === null &&
 					<WithoutUserContainer>
 						<WithoutUserIcon />
-						<WithoutUserTitle>{`Está meio vazio por aqui${'\n'}Busque por um usuário.`}</WithoutUserTitle>
+						<WithoutUserTitle> {`Está meio vazio por aqui${'\n'}Busque por um usuário.`} </WithoutUserTitle>
 					</WithoutUserContainer>
 				}
 
 				{users !== null && users.length > 0 &&
 					<UsersContainer>
-						<UsersTitle>{'Usuários encontrados'}</UsersTitle>
+						<UsersTitle> {'Usuários encontrados'} </UsersTitle>
 						<UsersList
 							data={users}
 							renderItem={renderUsers}
@@ -86,7 +86,7 @@ const Home = ({ navigation }) => {
 
 				{users !== null && users.length === 0 &&
 					<UsersContainer>
-						<UsersTitle>{'Nenhum usuário encontrado'}</UsersTitle>
+						<UsersTitle> {'Nenhum usuário encontrado'} </UsersTitle>
 					</UsersContainer>
 				}
 

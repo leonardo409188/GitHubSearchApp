@@ -34,7 +34,8 @@ const Favorites = ({ navigation }) => {
 			data={item} 
 			type={'favorite'} 
 			onPressIcon={() => removeFavorite(item.login, item.avatar_url, true)}
-			onPressList={() => navigation.navigate('Repositories', { user: item.login, picture: item.avatar_url })} />
+			onPressList={() => navigation.navigate('Repositories', { user: item.login, picture: item.avatar_url })} 
+		/>
 	);
 
 	return (

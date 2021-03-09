@@ -27,7 +27,7 @@ export const SearchButton = styled.TouchableOpacity`
     justify-content: center;
 
     ${props => props.disabled && css`
-    background-color: #D1C9C9;
+        background-color: #D1C9C9;
     `}
 `
 
@@ -62,9 +62,7 @@ export const WithoutUserTitle = styled.Text`
     text-align: center;
 `
 
-export const UsersList = styled.FlatList`
-
-`
+export const UsersList = styled.FlatList``
 
 export const UsersContainer = styled.View`
     padding: 30px 0px;

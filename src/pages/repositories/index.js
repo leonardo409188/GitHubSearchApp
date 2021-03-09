@@ -32,7 +32,7 @@ const Repositories = ({ route }) => {
 		const users = await getData('favorites');
 
 		if (users) {
-			const isFav = users.some(el => el.login === user); // retorna um boleano se existe no array ou não
+			const isFav = users.some(el => el.login === user); 
 			setIsFavorite(isFav);
 
 		} else {
@@ -47,7 +47,7 @@ const Repositories = ({ route }) => {
 			setPage(page + 1);
 
 		} catch (error) {
-			console.log(error)
+			console.log(error);
 		}
 
 	}
@@ -58,7 +58,7 @@ const Repositories = ({ route }) => {
 			setIsFavorite(newFavorite);
 
 		} catch (error) {
-			console.log(error)
+			console.log(error);
 		}
 	}
 
@@ -79,7 +79,7 @@ const Repositories = ({ route }) => {
 			<Header />
 			<ContentContainer>
 				<FavoriteView>
-					<ProfileText>{`Favoritar ${user}?`}</ProfileText>
+					<ProfileText> {`Favoritar ${user}?`} </ProfileText>
 					<ViewIcon onPress={() => handleFavorite()}>
 						<FavIcon isFavorite={isFavorite} />
 					</ViewIcon>
